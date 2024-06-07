@@ -1,0 +1,52 @@
+ {% load static %}
+ <!------------------------------------------------ FOOTER SECTION -->
+    <footer id="contact">
+      <div class="container">
+        <div class="row footer-top">
+          <div class="col-12 col-md-6">
+            <!-- logo -->
+            <h3>Ravio LTD </h3>
+            <h3>Explore Real Estate</h3>
+          </div>
+          <div class="col-12 col-md-6 Newsletter">
+            <input type="text" placeholder="Subscribe To Our Newsletter" class="left">
+            <button class="newsletter-btn left"></button>
+          </div>
+        </div>
+        <div class="row footer-bottom">
+          <div class="col-sm-12 col-md-4 footer-logo">
+            <h4>Jit</h4>
+            <p>© 2024 - Jit,<br>All Right Reserved</p>
+           
+          </div>
+          <div class="col-sm-3 col-md-2 footer-column">
+            <h5>Ravio</h5>
+            <a href="{% url 'accounts:login_view' %}">Agents</a>
+            <a href="{% url 'accounts:register_view' %}">Become an agent</a>
+          </div>
+          <div class="col-sm-3 col-md-2 footer-column">
+            <h5>COMPANY</h5>
+            <a href="{% url 'pages:about' %}">About</a>
+            <a href="{% url 'accounts:login_view' %}">FAQ</a>
+            <a href="{% url 'accounts:login_view' %}">Contact</a>
+            <a href="{% url 'accounts:login_view' %}">Social</a>
+          </div>          
+          <div class="col-sm-3 col-md-2 footer-column">
+            <h5>PRODUCT</h5>
+            <a href="{% url 'listings:listings' %}">Apartment</a>
+            <a href="{% url 'accounts:login_view' %}">How It Works</a>
+          </div>
+          <div class="col-sm-3 col-md-2 footer-column">
+            <h5>SERVICES</h5>
+            <a href="{% url 'accounts:login_view' %}">Renting</a>
+            <a href="{% url 'accounts:login_view' %}">Selling</a>
+            <a href="{% url 'Ages:Ages' %}">AGIS Verification</a>
+          </div>
+          <div class="col-sm-3 col-md-2">
+            <a href=" https://www.facebook.com/Koral-City-ltd-100737889187297"> <img src="{% static './images/facebook.png' %}" height="40" width="40"></a>
+            <a href="https://www.instagram.com/Ravioltd/"> <img src="{% static './images/instagram.png' %} "height="40" width="40"></a>
+            <a href="https://twitter.com/Ravioltd"><img src="{% static './images/twitter.png' %} "height="40" width="40"></a>
+          </div>
+        </div>
+      </div>
+    </footer>

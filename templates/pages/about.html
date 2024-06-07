@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+     About Us
+{% endblock title %}
+
+{% block content %}
+   <section class="home_banner_area hero"  id="about">
+    <div class="banner_inner d-flex align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <div class="banner_content d-flex flex-md-row flex-column">
+              <div class="banner-left text-md-right">
+                <h1 class="text-uppercase">About Us</h1>
+              </div>
+              <div class="banner-right position-relative">
+                <p>
+                  Ravio Limited.
+                </p>
+                <span class="main_btn mt-4 mt-md-0" href="#">
+                  <a href="" >Home</a> 
+                  <i class="fa fa-arrow-right mx-2"></i>
+                  <a href="#">About</a> 
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ <section class="statistic" id="about">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-6">
+            <h3>Our Company<br>Ravio Limited</h3>
+            <p>Ravio Limited offers property owners, developers and buyers/renters a viable housing market. Customers can source and connect with professional agents for the most advanced and eco-friendly housing. Established in 2024, Ravio believes everyone deserves a home with the most advanced technology and Eco-Friendly means. All lives matter.
+              <h3>Why you should choose us</h3>
+              <ul>  
+                <li>1. We offer land verification and authentication.</li><br>
+                <li>2. We sell, buy, and rent luxury properties at affordable rates.</li><br>
+                <li>3. We offer a conducive platform for property owners to showcase their services.</li><br>
+                <li>4. We have well trained professionals as consultants, developers and agents.</li><br>
+                <li>5. We are budget friendly.</li>
+                <li>  </li>
+              </ul></p>
+          </div>
+          <div class="col-12 col-lg-6 statistic-wrapper">
+            <div class="statistic-box text-center">
+              <p>384</p>
+              <p>Clients</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>748</p>
+              <p>Apartments</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>14</p>
+              <p>Awards</p>
+            </div>
+            <div class="statistic-box text-center">
+              <p>24</p>
+              <p>Employees</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!------------------------------------------------ AGENTS SECTION -->
+    <section id="agents" class="agents">
+      <div class="container">
+        <div class="row agents-services">
+          <div class="col-12 agents-title">
+            <h3>Meet Our Agents</h3>
+            <p>They provide one of the most professional, informative, loyal and dedicated services<br> in the real estate industry. Client’s satisfaction is their number one priority.</p>
+          </div>
+        </div>
+      
+        
+        <div class="row">
+          {% if realtors %}
+        {% for realtor in realtors %}
+          <!-- Agent  -->
+          <div class="col-12 col-md-12 col-lg-4">
+            <div class="card">
+              <div class="card-img", style="">
+                <!-- Agent Image  -->
+                <img src="{{realtor.photo.url}}" alt="">
+              </div>
+              <div class="appartment-info">
+                <div class="appartment-title">
+                  <!-- Agent Title  -->
+                  <p>Realtor</p>
+                </div>
+                <div class="appartment-title">
+                  <div class="left agent-name">
+                    <!-- Agent name  -->
+                    <p> {{realtor.name}}</p>
+                  </div>
+                  <div class="agent-social right flex-center">
+                    <a href="#"><img src="{%static 'images/facebook.svg'%}" alt=""></a>
+                    <a href="#"><img src="{%static 'images/twitter.svg'%}" alt=""></a>
+                    <a href="#"><img src="{%static 'images/dribble.svg'%}" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          {% endfor %}
+          {% else %}
+          <div class="col-md-12">
+            <p>No Realtors Avialbale</p>
+        </div>
+      {% endif %}
+
+
+
+        </div>
+        </div>
+      </section>
+{% endblock content %}
+
